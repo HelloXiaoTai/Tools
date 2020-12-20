@@ -56,9 +56,3 @@ def write_excel_xlwt(file,sheet_name,value):
 
 
 
-if __name__ == '__main__':
-    sheets=read_excel_sheet(r'E:\pythonProjects\domian_info\datas\tld.xlsx','Sheet1')
-    print(sheets)
-
-
-

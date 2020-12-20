@@ -45,7 +45,3 @@ def write_csv_row(filename, row):
         csv_write = csv.writer(out, dialect='excel')
         csv_write.writerow(row)
 
-
-if __name__ == '__main__':
-    domains = read_csv_all(r'E:\pythonProjects\domian_info\second_data\demo.csv', read_head_row=False)
-    print(domains)
