@@ -1,6 +1,7 @@
 #!/bin/bash
+#5分钟检测一次相关进程运行时间是否超过10分钟，是则kill掉
 
-#检测次数
+#检测次数掉
 count=0
 
 while true
@@ -25,7 +26,7 @@ time="$(ps -p $pid -o etimes | awk 'NR!=1 {print}')"
 
 if [ $time -ge '600'  ];then
 
-ps -eo pid,etime,cmd | grep $pid | grep -v grep >> kill_beian_thread.log
+ps -eo pid,etime,cmd | grep $pid | grep -v grep >> run.log
 kill -9 $pid
 
 fi

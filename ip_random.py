@@ -15,7 +15,11 @@ def ip_random(ip_first,ip_last,number):
     while True:
         ip_random = random.randint(ip_first_int, ip_last_int)
         if IPy.IP(ip_random) not in ip_list:
-            ip_list.append(IPy.IP(ip_random))
+            ip_list.append(IPy.IP(ip_random).strNormal())
             if len(ip_list) == number:
                 break
     return ip_list
+
+if __name__ == '__main__':
+    ips=ip_random('12.1.1.1','12.1.2.1',5)
+    print(ips) #['12.1.1.251', '12.1.1.44', '12.1.1.114', '12.1.1.128', '12.1.1.247']
